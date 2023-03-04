@@ -1,0 +1,31 @@
+<header>
+<h1>Login Page <i class="fas fa-login"></i></h1>
+<p>!This is Login Page - Welcome</p>
+</header>
+
+<form [formGroup]="loginForm">
+    <div class="field">
+        <label>:User Name<i class="fa fa-user"></i></label>
+        <input class="w3-input w3-border w3-round" type="text" formControlName="userName">
+    </div>
+
+    <div class="field">
+        <label>:Password<i class="fa fa-asterisk"></i></label>
+        <input class="w3-input w3-border w3-round" type="password" formControlName="password">
+    </div>
+
+    <div *ngIf="errorMessage" class="w3-container w3-red">{{ errorMessage }}</div>
+
+
+    <button class="w3-btn w3-green w3-round w3-block" [disabled]="!loginForm.valid" (click)="login()">Connecting <i class="fa fa-check"></i></button><br>
+
+<div class="cont">
+    <label class="contItem">Login With Google
+    </label>
+    <asl-google-signin-button class="contItem"></asl-google-signin-button>
+</div>
+
+    <p>
+        <a routerLink="/signup">Create a new account</a>
+    </p>
+</form>

@@ -1,0 +1,113 @@
+.welcome {
+    color: rgb(13, 59, 150);
+    margin-bottom: -16px;
+    margin-right: 16px;
+
+    button {
+        padding: 2px 6px;
+        margin-right: 5px;
+        font-size: 12px;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.frame {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    min-height: 500px;
+    background-color: white;
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 0 3px #0000006b;
+    // padding-bottom: 200px;
+    position: relative;
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 55px;
+}
+
+footer {
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    padding: 16px;
+    margin: auto;
+    max-width: 1100px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.548);
+    color: white;
+    text-align: center;
+}
+
+.loginProof {
+    top: 0px;
+    position: relative;
+    max-height: 70px;
+    min-height: 70px;
+    margin-bottom: -68px;
+}
+
+.loaderFrame {
+    position: fixed;
+    background: #0000009c;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+}
+
+.loader {
+    border: 16px solid #f3f3f38a;
+    border-radius: 50%;
+    border-top: 16px solid #0a0ace;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+// .cont {
+//     display: grid;
+//     grid-template-columns: auto auto auto auto auto;
+//     padding: 5px;
+//     width: 100%;
+// }
+
+// .contItem {
+//     margin: auto;
+//     float: left;
+//     margin-bottom: 10px;
+// }

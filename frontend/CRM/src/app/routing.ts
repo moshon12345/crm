@@ -1,0 +1,34 @@
+import { Routes } from "@angular/router";
+import { AddcontactComponent } from "./contacts/addcontact/addcontact.component";
+import { AddcustomerComponent } from "./customers/addcustomer/addcustomer.component";
+import { ContactsComponent } from "./contacts/contacts.component";
+import { CustomersComponent } from "./customers/customers.component";
+import { ErrorPageComponent } from "./error-page/error-page.component";
+import { HomeComponent } from "./home/home.component";
+import { LoginComponent } from "./login/login.component";
+import { SignupComponent } from "./signup/signup.component";
+import { CustomerEditComponent } from "./customers/customer-edit/customer-edit.component";
+import { ContactEditComponent } from "./contacts/contact-edit/contact-edit.component";
+import { CustomerDetailsComponent } from "./customers/customer-details/customer-details.component";
+import { ContactDetailsComponent } from "./contacts/contact-details/contact-details.component";
+import { AboutComponent } from "./about/about.component";
+import { ContactDetails2Component } from "./contacts/contact-details/contact-details2/contact-details2.component";
+import { CustomerDetails2Component } from "./customers/customer-details/customer-details2/customer-details2.component";
+
+export const routes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'signup', component: SignupComponent },
+    { path: 'customers', component: CustomersComponent },
+    { path: 'addcustomer', component: AddcustomerComponent },
+    { path: 'customerEdit/:id', component: CustomerEditComponent },
+    { path: 'customerDetails/:id', component: CustomerDetailsComponent },
+    { path: 'customerDetails2/:id', component: CustomerDetails2Component },
+    { path: 'contacts', component: ContactsComponent },
+    { path: 'addcontact', component: AddcontactComponent },
+    { path: 'contactEdit/:id', component: ContactEditComponent },
+    { path: 'contactDetails/:id', component: ContactDetailsComponent },
+    { path: 'contactDetails2/:id', component: ContactDetails2Component },
+    { path: '**', component: ErrorPageComponent },
+];

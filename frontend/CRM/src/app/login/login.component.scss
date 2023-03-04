@@ -1,0 +1,69 @@
+header {
+    background: rgba(0, 0, 0, 0.242);
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        color: black;
+        text-align: center;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    background: #ffffffcc;
+    padding: 32px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #00000075;
+    margin: 30px auto;
+
+    .field,
+    input {
+        text-align: left;
+        margin-bottom: 12px;
+    }
+}
+
+.w3-green {
+    text-align: center;
+}
+
+p {
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: #2a0fc8;
+
+    a {
+        text-decoration: none;
+        transition: 0.3s;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+            scale: 1.1;
+        }
+    }
+}
+
+i {
+    padding: 5px;
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 5px;
+    width: 100%;
+}
+
+.contItem {
+    margin: auto;
+    float: left;
+    margin-bottom: 5px;
+}

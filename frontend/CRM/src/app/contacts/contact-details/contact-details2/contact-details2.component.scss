@@ -1,0 +1,76 @@
+.cont {
+    display: grid;
+        grid-template-columns: auto;
+        padding: 5px;
+        width: 100%;
+}
+
+.contItem {
+    margin: auto;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.line {
+    font-weight: bolder;
+    border-bottom: 1px solid black;
+}
+
+th {
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 8px;
+    font-size: 16px;
+    text-align: left;
+    height: 35px;
+    width: 150px;
+    margin-top: -10px;
+}
+
+td {
+    position: flex;
+    margin: auto;
+    margin-left: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    padding: 8px;
+    font-size: 16px;
+    text-align: left;
+    height: 35px;
+    width: 500px;
+    margin-left: -145px;
+    margin-top: -10px;
+}
+
+table {
+    background-color: #0d72c5b6;
+    border: 2px solid black;
+}
+
+button {
+    border: 1px black solid;
+    background-color: #0d72c5b6 !important;
+}
+
+.contIn {
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 5px;
+    width: 100%;
+}
+
+.contItemIn {
+    float: left;
+    border-left: 1px solid #15131246;
+}
+
+@media (max-width: 610px) {
+
+    .contIn {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px;
+    }
+}

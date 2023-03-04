@@ -1,0 +1,94 @@
+<header>
+    <h1>Contacts Page <i class="fa fa-group"></i></h1>
+    <p>!This is Contacts Page - Welcome</p>
+</header>
+
+<div class="displayMode">
+    <button class="changeViewBtn"(click)="changedisplayModeToFolder()"><img alt="folder" src="assets/images/folder.png" width="60px">
+    </button>
+    <button class="changeViewBtn"(click)="changedisplayModeToCard()"><img alt="list" src="assets/images/userMan.png" width="60px">
+    </button>
+    <button class="changeViewBtn"(click)="changedisplayModeToTable()"><img alt="list" src="assets/images/spreadsheet.png" width="45px">
+    </button>
+</div>
+
+<div class="addContact">
+    <button class="w3-btn w3-white w3-round" [routerLink]="['/addcontact']"> Add Contact<i class="fa fa-plus"></i></button>
+</div>
+
+<div class="SearchContact" >
+    <input *ngIf="selectChoiseHtml !== 'age'" type="text" [(ngModel)]="searchVal" placeholder="חיפוש" (ngModelChange)="search()">
+    <input *ngIf="selectChoiseHtml == 'age'" type="number" [(ngModel)]="searchVal" placeholder="חיפוש" (ngModelChange)="search()">
+              <select class="w3-btn w3-white w3-round" [(ngModel)]="selectChoiseHtml">
+                      <option value="0" >Select option:</option>
+                      <option value="firstName">First Name</option>
+                      <option value="lastName">Last Name</option>
+                      <option value="email">Email</option>
+                      <option value="notes">Notes</option>
+                      <option value="age">Age</option>
+              </select>
+</div>
+
+<!-- table -->
+<table class="w3-table w3-striped w3-bordered contacts" *ngIf="displayMode == 'table'">
+    <thead>
+        <tr>
+            <th>Remove</th>
+            <th>Edit</th>
+            <th class="thAge">Age</th>
+            <th class="thEmail">Email</th>
+            <th class="thLastName">Last Name</th>
+            <th>First Name</th>
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of contactsSearch; let i = index" [attr.title]="[item.createdTime | date : 'dd/MM/yyyy']" [routerLink]="['/contactDetails', item.id]">
+            <td>
+                <button class="w3-btn w3-red w3-round"  (click)="remove(item)">Delete</button>
+            </td>
+            <td>
+                <button class="w3-btn w3-gray w3-round"  [routerLink]="['/contactEdit', item.id]">Edit</button>
+            </td>
+              <td class="thAge">{{ item.birthday | age }}</td>
+              <td class="thEmail">{{ item.email }}</td>
+              <td class="thLastName">{{ item.lastName }}</td>
+              <td class="thFirstName">{{ item.firstName }}</td>
+              <!-- <td>{{ item.createdTime | date : 'dd/MM/yyyy' }}</td> -->
+              <td>{{ i + 1 }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- cards -->
+<div class="card" *ngIf="displayMode == 'cards'">
+<div class="grid-container" *ngIf="displayMode == 'cards'" >
+    <div class="cardPerson" *ngFor="let item of contactsSearch; let i = index"  [routerLink]="['/contactDetails', item.id]">
+  <img src="assets/images/userMan.png" alt="Avatar" style="width:60%">
+  <div class="container">
+    <h4><b>{{item.firstName}} {{item.lastName}}</b></h4>
+    <p><b>Birthday:</b> {{item.birthday | date : 'dd/MM/yyyy' }}</p>
+    <p><b>Age:</b> {{item.birthday | age}}</p>
+    <div class="btns">
+        <button class="w3-btn w3-red w3-round"  (click)="remove(item)">Delete</button>
+        <button class="w3-btn w3-gray w3-round" [routerLink]="['/contactEdit', item.id]">Edit</button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- folders -->
+<div class="grid-container" *ngIf="displayMode == 'folders'" >
+    <div class="cardPerson" *ngFor="let item of contactsSearch; let i = index" [routerLink]="['/contactDetails', item.id]">
+  <img src="assets/images/folder.png" alt="folder" style="width:60%">
+  <div class="container">
+    <h4><b>{{item.firstName}} {{item.lastName}}</b></h4>
+    <p><b>Birthday:</b> {{item.birthday | date : 'dd/MM/yyyy' }}</p>
+    <p><b>Age:</b> {{item.birthday | age}}</p>
+    <div class="btns">
+        <button class="w3-btn w3-red w3-round"  (click)="remove(item)">Delete</button>
+        <button class="w3-btn w3-gray w3-round" [routerLink]="['/contactEdit', item.id]">Edit</button>
+  </div>
+</div>

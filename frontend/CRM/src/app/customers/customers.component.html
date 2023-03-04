@@ -1,0 +1,95 @@
+<header>
+<h1>Customers Page <i class="fa fa-group"></i></h1>
+<p>!This is Customers Page - Welcome</p>
+</header>
+
+
+<div class="displayMode">
+    <button class="changeViewBtn"(click)="changedisplayModeToFolder()"><img alt="folder" src="assets/images/folder.png" width="60px">
+    </button>
+    <button class="changeViewBtn"(click)="changedisplayModeToCard()"><img alt="list" src="assets/images/userMan.png" width="60px">
+    </button>
+    <button class="changeViewBtn"(click)="changedisplayModeToTable()"><img alt="columns" src="assets/images/spreadsheet.png" width="45px">
+    </button>
+</div>
+
+
+<div class="addCustomer">
+<button class="w3-btn w3-white w3-round" [routerLink]="['/addcustomer']"> Add Customer <i class="fa fa-plus"></i></button>
+</div>
+
+<div class="SearchCustomer">
+    <input type="text" [(ngModel)]="searchVal" placeholder="חיפוש" (ngModelChange)="search()">
+    <select class="w3-btn w3-white w3-round" [(ngModel)]="selectChoiseHtml">
+           <option value="0" >Select option:</option>
+            <option value="firstName">First Name</option>
+            <option value="lastName">Last Name</option>
+            <option value="email">Email</option>
+            <option value="notes">Notes</option>
+    </select>
+</div>
+
+<!-- table -->
+<div class="table" *ngIf="displayMode == 'table'">
+<table class="w3-table w3-striped w3-bordered customers">
+    <thead>
+        <tr>
+            <th>Remove</th>
+            <th>Edit</th>
+            <th class="thPhone">Phone</th>
+            <th class="thEmail">Email</th>
+            <th class="thLastName">Last Name</th>
+            <th>First Name</th>
+            <!-- <th>Created Time</th> -->
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of customersSearch; let i = index" [attr.title]="[item.createdTime | date : 'dd/MM/yyyy']"  [routerLink]="['/customerDetails', item.id]">
+            <td>
+                <button class="w3-btn w3-red w3-round"  (click)="remove(item)">Delete</button>
+            </td>
+            <td>
+                <button class="w3-btn w3-gray w3-round" [routerLink]="['/customerEdit', item.id]">Edit</button>
+            </td>
+              <td class="thPhone">{{ item.phone }}</td>
+              <td class="thEmail">{{ item.email }}</td>
+              <td class="thLastName">{{ item.lastName }}</td>
+              <td class="thFirstName">{{ item.firstName }}</td>
+              <!-- <td>{{ item.createdTime | date : 'dd/MM/yyyy' }}</td> -->
+              <td>{{ i + 1 }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<!-- cards -->
+<div class="card" *ngIf="displayMode == 'cards'">
+<div class="grid-container" *ngIf="displayMode == 'cards'" >
+    <div class="cardPerson" *ngFor="let item of customersSearch; let i = index" [routerLink]="['/customerDetails', item.id]">
+  <img src="assets/images/userMan.png" alt="Avatar" style="width:60%">
+  <div class="container">
+    <h4><b>{{item.firstName}} {{item.lastName}}</b></h4>
+    <p>{{item.position}} at {{item.companyName}}</p>
+    <div class="btns">
+        <button class="w3-btn w3-red w3-round"  (click)="remove(item)">Delete</button>
+        <button class="w3-btn w3-gray w3-round" [routerLink]="['/customerEdit', item.id]">Edit</button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- folders -->
+<div class="folder" *ngIf="displayMode == 'folders'">
+<div class="grid-container" *ngIf="displayMode == 'folders'" >
+    <div class="cardPerson" *ngFor="let item of customersSearch; let i = index" [routerLink]="['/customerDetails', item.id]">
+  <img src="assets/images/folder.png" alt="folder" style="width:60%">
+  <div class="container">
+    <h4><b>{{item.firstName}} {{item.lastName}}</b></h4>
+    <p>{{item.position}} at {{item.companyName}}</p>
+    <div class="btns">
+        <button class="w3-btn w3-red w3-round"  (click)="remove(item)">Delete</button>
+        <button class="w3-btn w3-gray w3-round" [routerLink]="['/customerEdit', item.id]">Edit</button>
+  </div>
+</div>

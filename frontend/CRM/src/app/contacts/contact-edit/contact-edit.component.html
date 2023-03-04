@@ -1,0 +1,79 @@
+<header>
+<h1>Edit Contact Page <i class="fa fa-group"></i></h1>
+<p>!This is Create New Contact Page - Welcome</p>
+</header>
+
+<form *ngIf="form" [formGroup]="form">
+
+    <div class="grid-container1">
+
+    <div class="firstName grid-item">
+        <label>:First Name <i class="fa fa-user"></i></label>
+         <input class="w3-input w3-border w3-round" type="text" formControlName="firstName">
+    </div>
+
+    <div class="lastName grid-item">
+        <label>:Last Name <i class="fa fa-user"></i></label>
+         <input class="w3-input w3-border w3-round" type="text" formControlName="lastName">
+    </div>
+
+     <div class="birthday grid-item">
+        <label>:Birthday <i class="fa fa-user"></i></label>
+         <input class="w3-input w3-border w3-round birthdayInput" type="date" formControlName="birthday">
+    </div>
+	
+     <div class="field grid-item">
+        <label>:Email <i class="fa fa-envelope"></i></label>
+         <input class="w3-input w3-border w3-round" type="email" formControlName="email">
+    </div>
+    
+
+    <div class="companyName grid-item">
+         <label>:Phone <i class="fa fa-phone"></i></label>
+         <input class="w3-input w3-border w3-round" type="tel" formControlName="phone">
+    </div>
+
+    <div class="position grid-item">
+        <label>:State <i class="fa fa-copyright"></i></label>
+         <input class="w3-input w3-border w3-round" type="text" formControlName="state">
+    </div>
+
+    <div class="field grid-item">
+         <label>:Country <i class="fa fa-street-view"></i></label>
+         <input class="w3-input w3-border w3-round" type="text" formControlName="country">
+    </div>
+
+    <div class="field grid-item">
+          <label>:City <i class="fa fa-phone"></i></label>
+         <input class="w3-input w3-border w3-round" type="text" formControlName="city">
+    </div>
+
+    <div class="field grid-item">
+         <label>:Street <i class="fa fa-step-forward"></i></label>
+         <input class="w3-input w3-border w3-round" type="text" formControlName="street">
+    </div>
+
+    <div class="field grid-item">
+         <label>:House Number <i class="fa fa-step-forward"></i></label>
+         <input class="w3-input w3-border w3-round" type="number" formControlName="houseNumber">
+    </div>
+
+    <div class="field grid-item">
+         <label>:Zip <i class="fa fa-step-forward"></i></label>
+         <input class="w3-input w3-border w3-round" type="number" formControlName="zipCode">
+    </div>
+
+     <div class="field grid-item">
+         <label>:Notes <i class="fa fa-step-forward"></i></label>
+         <input class="w3-input w3-border w3-round" type="text" formControlName="notes">
+    </div>
+    
+    </div>
+
+    <div class="buttons">
+         <button class="w3-btn w3-orange w3-round w3-block" (click)="refreshIt()">Reset <i class="fa fa-trash"></i></button>
+         <button class="w3-btn w3-green w3-round w3-block" [disabled]="!form.valid" (click)="save()">Save <i class="fa fa-save"></i></button>
+         <button class="w3-btn w3-red w3-round w3-block" [routerLink]="['/contacts']">Cancel <i class="fa fa-save"></i></button>
+    </div>
+    
+</form>

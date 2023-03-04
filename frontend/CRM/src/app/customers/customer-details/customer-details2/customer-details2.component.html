@@ -1,0 +1,75 @@
+<div class="cont">
+
+<div class="contItem">
+    <h1>{{customer?.firstName}} {{customer?.lastName}} details (Customer)</h1>
+</div>
+
+<div class="contItemBtn">
+    <button [routerLink]="['/customers']" class="w3-btn w3-gray w3-round">Back to Customers</button>
+</div>
+
+
+<div class="contItem">
+<table>
+
+
+    <tr>
+        <td>{{customer?.firstName}}</td>
+        <th><b>First Name</b></th>
+    </tr>
+
+
+
+    <tr>
+        <td>{{customer?.lastName}}</td>
+        <th><b>Last Name</b></th>
+    </tr>
+
+
+
+    <tr>
+        <td>{{customer?.companyName }}</td>
+        <th><b>Company Name</b></th>  
+    </tr>
+
+
+
+    <tr>
+        <td>{{customer?.position}}</td>
+        <th><b>Position</b></th>  
+    </tr>
+
+  
+
+    <tr>
+        <td>{{customer?.email}}</td>
+        <th><b>Email</b></th>  
+    </tr>
+
+  
+
+    <tr>
+        <td>{{customer?.phone}}</td> 
+        <th><b>Phone</b></th> 
+    </tr>
+
+    <tr>
+        <td>{{customer?.firstConvSum}}</td> 
+        <th><b>:Summary of first conversation</b></th> 
+    </tr>
+
+    
+    <tr>
+        <td>{{customer?.notes}}</td> 
+        <th><b>:Notes</b></th> 
+    </tr>
+
+    <tr>  
+        <td>{{customer?.createdTime | date}}</td> 
+        <th><b>created Time</b></th> 
+    </tr>
+</table>
+</div>  
+
+
+</div>

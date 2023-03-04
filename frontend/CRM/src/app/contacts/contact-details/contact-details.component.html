@@ -1,0 +1,76 @@
+ <div class="grid-item">
+<h1 style="text-align:center">{{contact?.firstName}} {{contact?.lastName}} details (Contact)</h1>
+<img src="assets/images/userMan.png" alt="John">
+</div>
+
+<button class="changeViewBtn" alt="list" src="assets/images/spreadsheet.png" width="45px" [routerLink]="['/contactDetails2', contact?.id]">Click here to view this information in Card form
+</button>
+
+<div class="grid-container">
+      <div class="grid-item">
+        <h4>:Full Name</h4>
+        <p>{{contact?.firstName}} {{contact?.lastName}}</p>
+  </div>
+
+    <div class="grid-item">
+        <h4>:Birthday</h4>
+        <p>{{contact?.birthday | date}}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:Age</h4>
+        <p>{{contact?.age }}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:Email</h4>
+        <p>{{contact?.email}}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:Phone</h4>
+        <p>{{contact?.phone}}</p>
+    </div>
+    
+
+      <div class="grid-item">
+        <h4>:State</h4>
+        <p>{{contact?.state}}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:Country</h4>
+        <p>{{contact?.country}}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:City</h4>
+        <p>{{contact?.city}}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:Street</h4>
+        <p>{{contact?.street}}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:House Number</h4>
+        <p>{{contact?.houseNumber}}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:zip Code</h4>
+        <p>{{contact?.zipCode}}</p>
+    </div>
+
+    <div class="grid-item">
+        <h4>:Notes</h4>
+        <p>{{contact?.notes}}</p>
+    </div>
+    
+    <div class="grid-item">
+        <h4>:Created Time</h4>
+       <p>{{contact?.createdTime | date}}</p>
+   </div>
+   
+ </div>

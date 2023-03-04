@@ -1,0 +1,110 @@
+<div class="cont">
+
+<div class="contItem">
+<h1 style="text-align:center">{{contact?.firstName}} {{contact?.lastName}} details (Contact)</h1>
+</div>
+
+
+<div class="contItem">
+<button [routerLink]="['/contacts']" class="w3-btn w3-gray w3-round">Back to Contacts</button>
+</div>
+
+<div class="contItem">
+<table>
+
+    <tr>
+        <td>{{contact?.firstName}}</td>
+        <th><b>First Name</b></th>
+    </tr>
+
+
+
+    <tr>
+        <td>{{contact?.lastName}}</td>
+        <th><b>Last Name</b></th>
+    </tr>
+
+
+
+    <tr>
+        <td>{{contact?.age }}</td>
+        <th><b>Age</b></th>  
+    </tr>
+
+
+
+    <tr>
+        <td>{{contact?.birthday | date}}</td>
+        <th><b>Birthday</b></th>  
+    </tr>
+
+  
+
+    <tr>
+        <td>{{contact?.email}}</td>
+        <th><b>Email</b></th>  
+    </tr>
+
+  
+
+    <tr>
+        <td>{{contact?.phone}}</td> 
+        <th><b>Phone</b></th> 
+    </tr>
+
+<tr>
+    
+      <td>
+
+        <div class="contIn">
+
+        <div class="contItemIn">
+            <p class="line">Zip</p>
+            <p>{{contact?.zipCode}}</p>
+        </div>
+        
+        <div class="contItemIn">
+            <p class="line">House Number</p>
+            <p>{{contact?.houseNumber}}</p>
+         </div>        
+
+        <div class="contItemIn">
+            <p class="line">Street</p>
+            <p>{{contact?.street}}</p>
+        </div>  
+
+
+        <div class="contItemIn">
+            <p class="line">City</p>
+            <p>{{contact?.city}}</p>
+        </div>     
+
+
+        <div class="contItemIn">
+            <p class="line">Country</p>
+            <p>{{contact?.country}}</p>
+        </div>      
+            
+
+        <div>
+            <p class="line">State</p>
+            <p>{{contact?.state}}</p>
+        </div>
+   </div>
+
+        </td>  
+    <th><b>Address</b></th> 
+</tr>
+
+ 
+
+    <tr>  
+        <td>{{contact?.createdTime | date}}</td> 
+        <th><b>created Time</b></th> 
+    </tr>
+
+</table>
+
+</div>
+
+</div>

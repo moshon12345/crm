@@ -1,0 +1,238 @@
+@media (max-width: 405px) {
+    .Login1,
+    .Signup1 {
+        text-align: center;
+        margin-top: 0px;
+        width: 50%;
+        background: rgba(0, 0, 0, 0.662);
+    }
+
+    .logoNoUser {
+        position: absolute;
+    }
+
+    nav.navbar {
+        margin-bottom: 60px;
+
+        a {
+                padding: 16px;
+                display: inline-block;
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+        
+                &:hover {
+                color: black;
+                background-color: #616161ba;
+                }
+            }
+        
+            .navActive {
+                color: black;
+                background-color: #616161ba;
+            }
+
+            .About1 {
+                margin: auto;
+                text-align: center;
+                min-width: 100%;
+                margin-top: 36px;
+                height: 54px;
+            }
+    }
+
+    nav.sidebar {
+                margin-top: -60px !important;
+    }
+}
+
+@media (max-width: 350px) {
+     nav.sidebar {
+                margin-top: -7px !important;
+    }
+
+    .Logout {
+        text-align: center;
+        margin-top: -4.3px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.662);
+    }
+
+    .About {
+        text-align: center;
+    }
+    nav.navbar {
+        text-align: center;
+        margin-bottom: 60px;
+
+        a {
+            padding: 16px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: black;
+                background-color: #616161ba;
+            }
+        }
+
+        .navActive {
+            color: black;
+            background-color: #616161ba;
+        }
+    }
+}
+
+nav.navbar {
+    border-top: 3px solid black;
+    background-color: #ffffff56;
+    direction: ltr;
+    background: rgba(0, 0, 0, 0.662);
+    color: white;
+
+    a {
+        padding: 16px;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            background-color: #cec7c756;
+        }
+    }
+
+    .navActive {
+        background-color: #ffffff47;
+    }
+}
+
+.burger {
+    position: flex;
+    // top: 150px;
+}
+
+nav.sidebar {
+    display: none;
+    border-top: 3px solid black;
+    background-color: black;
+    color: black;
+    width: 130px;
+    position: absolute;
+    left: -9.4px;
+    transition: 1.6s;
+    z-index: 9999;
+    
+    &.open {
+        display: block;
+        left: -9.5px;
+        transition: 2s;
+    }
+
+    a {
+        padding: 16px;
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid #6c6c6c;
+
+        &:hover {
+            background-color: #ffffff56;
+        }
+
+        i {
+            float: left;
+        }
+    }
+
+    .navActive {
+        background-color: #ffffff47;
+    }
+}
+
+.container {
+    cursor: pointer;
+    margin: 9px;
+    float: left;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 7px 0;
+    transition: 2s;
+}
+
+.openSideBar {
+    position: relative;
+    top: 30px;
+}
+
+.open .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.Logout,
+.Login,
+.Signup {
+float: right;
+}
+
+.Logout1,
+.Login1,
+.Signup1 {
+float: right;
+}
+
+.About {
+    margin-left: 105px;
+}
+
+.About1 {
+    margin-left: 105px;
+}
+
+// @media screen and (max-width: 440px) {
+//     nav.navbar {
+//         position: relative;
+//         float: left;
+//         width: 100%;
+//         margin-bottom: 50px;
+//     }
+
+//     .logo {
+//         position: absolute;
+//         margin-top: -50px;
+//         z-index: 1000;
+//     }
+// }
+
+.logo {
+       position: absolute;
+       margin-top: -9px;
+       margin-left: -9px;
+       margin-bottom: 15px;     
+}
+
+.logoNoUser {
+       margin-top: -9px;
+       position: absolute;
+       margin-left: -9px;
+       margin-bottom: 15px;
+}
+
+

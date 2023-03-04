@@ -1,0 +1,42 @@
+<header>
+<h1>Create User Page <i class="fa fa-user"></i></h1>
+<p>!This is Create User Page - Welcome</p>
+</header>
+
+<div *ngIf="isSend == true" class="w3-panel w3-green">
+  <h3>!success</h3>
+  <p>!Registration successful</p>
+</div>
+
+<form [formGroup]="signupForm">
+    <div class="field">
+        <label>:Full Name<i class="fa fa-user"></i></label>
+        <input class="w3-input w3-border w3-round" type="text" formControlName="fullName">
+    </div>
+
+    <div class="field">
+        <label>:Email<i class="fa fa-envelope"></i></label>
+        <input class="w3-input w3-border w3-round" type="text" formControlName="email">
+    </div>
+
+    <div class="field">
+        <label>:User Name<i class="fa fa-user"></i></label>
+        <input class="w3-input w3-border w3-round" type="text" formControlName="userName">
+    </div>
+
+    <div class="field">
+        <label>:Password<i class="fa fa-asterisk"></i></label>
+        <input class="w3-input w3-border w3-round" type="text" formControlName="password">
+    </div>
+
+    <button class="w3-btn w3-green w3-round w3-block" [disabled]="!signupForm.valid" (click)="signup()">Create a user<i class="fa fa-check"></i></button><br>
+
+    <div class="cont">
+    <label class="contItem">Login With Google
+    </label>
+    <asl-google-signin-button class="contItem"></asl-google-signin-button>
+</div><br>
+     <p>
+        <a routerLink="/login">Go to login</a>
+    </p>
+</form>

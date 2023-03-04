@@ -1,0 +1,67 @@
+body {
+    direction: ltr;
+}
+
+.firstName,
+.lastName,
+.birthday,
+.companyName,
+.position,
+.field,
+.email,
+.phone {
+    text-align: left;
+}
+
+i {
+    padding: 7px;
+}
+
+header {
+    background-color: rgba(48, 102, 189, 0.685);
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.grid-container1 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    display: grid;
+    grid-template-columns: auto;
+    background-color: rgba(48, 102, 189, 0.685);
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.w3-input {
+    direction: ltr;
+}
+
+.asterisk {
+    color: red;
+    font-size: 20px;
+}
+
+.birthdayInput {
+    text-align: left;
+}
+
+

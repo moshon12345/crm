@@ -1,0 +1,45 @@
+<div class="grid-item">
+<h1 style="text-align:center">{{customer?.firstName}} {{customer?.lastName}} details (Customer)</h1>
+<img src="assets/images/userMan.png" alt="John">
+</div>
+
+<button class="changeViewBtn" alt="list" src="assets/images/spreadsheet.png" width="45px" [routerLink]="['/customerDetails2', customer?.id]">Click here to view this information in Card form
+</button>
+
+<div class="grid-container">
+    <div class="grid-item">
+      <div class="grid-item">
+        <h4>:Full Name</h4>
+        <p>{{customer?.firstName}} {{customer?.lastName}}</p>
+  </div>
+       <div class="grid-item">
+        <h4>:Company Name</h4>
+   <p>{{customer?.companyName}}</p>
+   </div>
+       <div class="grid-item">
+        <h4>:Position</h4>
+  <p>{{customer?.position}}</p>
+  </div>
+       <div class="grid-item">
+        <h4>:Email</h4>
+  <p>{{customer?.email}}</p>
+  </div>
+       <div class="grid-item">
+        <h4>:Phone</h4>
+  <p>{{customer?.phone}}</p>
+  </div>
+      
+       <div class="grid-item">
+        <h4>:Summary of first conversation</h4>
+  <p>{{customer?.firstConvSum}}</p>
+  </div>
+   <div class="grid-item">
+    <h4>:Notes</h4>
+  <p>{{customer?.notes}}</p>
+   </div>
+
+   <div class="grid-item">
+        <h4>:Created Time</h4>
+  <p>{{customer?.createdTime | date}}</p>
+  </div>
+ </div>
